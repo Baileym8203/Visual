@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@400;500&display=swap");
+
+.navbar-logo {
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  border-radius: 75%;
+}
+
+.navbar {
+  opacity: 85%;
+  font-family: "M PLUS 1 Code";
+}
+
+.offcanvas-navbar-toggle {
+  background-color: grey;
+  width: 75px;
+  background: none;
+  border: none;
+}
+
+.offcanvas-navbar-toggle:hover,
+.offcanvas-navbar-toggle:active {
+  border: solid 3px white;
+  width: 60px;
+  height: 45px;
+  transition: 1s;
+}
+.CodeEasy {
+  color: white;
+}
+
+.off-canvas-navbar {
+  font-family: "M PLUS 1 Code";
+  font: "30px";
+  background-color: rgba(41, 41, 41, 0.849);
+  box-shadow: none;
+}
+
+.offcanvas-links {
+  color: white;
+}
+
+.offcanvas-links:hover {
+  color: rgb(95, 95, 95);
+}
