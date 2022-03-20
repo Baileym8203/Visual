@@ -21,7 +21,7 @@ export default class App extends React.Component {
               <Routes>
                 <Route exact path="/Visual" element={<Register />} />
 
-                <Route exact path="/home" element={<Home />} />
+                <Route exact path="/Visual/Home" element={<Home />} />
               </Routes>
             </Col>
           </Row>

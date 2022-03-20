@@ -16,7 +16,7 @@ const registerUser = () => {
  .then((res) => {
   setIsSignedIn(true)
   console.log(res)
-  window.location.href="/home" // will register and sign you in
+  window.location.href="/Visual/Home" // will register and sign you in
  })
  .catch((err) => {
   console.log(err)
@@ -28,7 +28,7 @@ signInWithEmailAndPassword(authentication, email, password)
 .then((res) => {
 setIsSignedIn(true)
 console.log(res)
-window.location.href="/home" // will sign you in
+window.location.href="/Visual/Home" // will sign you in
 })
 .catch((err) => {
 console.log(err)
