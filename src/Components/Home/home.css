@@ -1,0 +1,46 @@
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.top-heading{
+margin-top: 75px;
+}
+
+.search-image{
+width: 30px;
+height: 30px;
+}
+
+.col-return-box {
+background-color: white;
+margin-top: 150px;
+margin-bottom: 150px;
+margin-right: 5px;
+}
+
+.button-code.show {
+display:block;
+color: black;
+padding-bottom: 100px;
+}
+
+.button-code {
+display: none;
+}
+
+.button-code-header {
+display: none;
+}
+
+.button-code-header.show {
+display: block;
+color: black;
+padding-top: 100px;
+}

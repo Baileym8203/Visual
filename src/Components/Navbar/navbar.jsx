@@ -2,7 +2,8 @@ import react from "react";
 import { Container, Navbar, Nav, Image, Offcanvas, Button } from "react-bootstrap";
 import { authentication } from "../Firebase/firebase";
 import { signOut } from "firebase/auth";
-
+import Cookies from 'js-cookie'
+import NavbarLogo from '../../../src/CodeEasy.png'
 import './navbar.css'
 export default class NavbarItem extends react.Component {
   render() {
@@ -10,8 +11,9 @@ export default class NavbarItem extends react.Component {
    const signOutUser = () => {
      signOut(authentication)
        .then((res) => {
+        Cookies.remove('cookie-SignIn') // removes cookie
         console.log(res);
-         window.location.href="/Visual"
+        window.location.href="/Visual" // then sends you back to login/Register
        })
        .catch((err) => {
          console.log(err);
@@ -22,10 +24,7 @@ export default class NavbarItem extends react.Component {
         <Navbar bg="dark" expand={false}>
           <Container fluid>
             <Navbar.Brand href="/Visual">
-              <Image
-                className="navbar-logo"
-                src="https://static.thenounproject.com/png/1171-200.png"
-              />
+              <Image className="navbar-logo" src={NavbarLogo}/>
             </Navbar.Brand>
             <Navbar.Brand>
               <h3 className="CodeEasy">//CodeEasy</h3>
