@@ -2,21 +2,25 @@
  [
    {
      "id": 1,
-     "text": "button-HTML"
-   },
-   {
-     "id": 2,
-     "text": "a-HTML"
+     "text": "Button --HTML-BODY"
    },
    {
      "id": 3,
-     "text": "img-HTML"
+     "text": "Link --HTML-BODY"
    },
    {
      "id": 4,
-     "text": "p-HTML"
+     "text": "Image --HTML-BODY"
    },
    {
      "id": 5,
-     "text": "div-HTML"
-   }] 
+     "text": "paragraph --HTML-BODY"
+   },
+   {
+     "id": 6,
+     "text": "section --HTML-BODY"
+   },
+   {
+     "id": 7,
+     "text": "div --HTML-BODY"
+   }]

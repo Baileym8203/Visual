@@ -23,7 +23,10 @@ background-color: white;
 margin-top: 150px;
 margin-bottom: 150px;
 margin-right: 5px;
+border-radius: 3%;
 }
+
+/* start of button-code stylings */
 
 .button-code.show {
 display:block;
@@ -44,3 +47,93 @@ display: block;
 color: black;
 padding-top: 100px;
 }
+
+/* start of image-code stylings */
+
+.image-code {
+display: none;
+}
+
+.image-code.show {
+display:block;
+color: black;
+padding-bottom: 100px;
+}
+
+.image-code-header {
+display: none;
+}
+
+.image-code-header.show {
+display: block;
+color: black;
+padding-top: 100px;
+}
+
+/* start of link-code stylings */
+
+.link-code {
+display: none;
+}
+
+.link-code.show {
+display:block;
+color: black;
+padding-bottom: 100px;
+}
+
+.link-code-header {
+display: none;
+}
+
+.link-code-header.show {
+display: block;
+color: black;
+padding-top: 100px;
+}
+
+/* start of paragraph-code stylings */
+
+.paragraph-code {
+display: none;
+}
+
+.paragraph-code.show {
+display:block;
+color: black;
+padding-bottom: 100px;
+}
+
+.paragraph-code-header {
+display: none;
+}
+
+.paragraph-code-header.show {
+display: block;
+color: black;
+padding-top: 100px;
+}
+
+/* start of section-code stylings */
+
+.section-code {
+display: none;
+}
+
+.section-code.show {
+display:block;
+color: black;
+padding-bottom: 100px;
+}
+
+.section-code-header {
+display: none;
+}
+
+.section-code-header.show {
+display: block;
+color: black;
+padding-top: 100px;
+}
+
+/* end of coding session ends with section-code */

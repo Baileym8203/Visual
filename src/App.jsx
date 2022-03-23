@@ -7,30 +7,14 @@ import Register from "./Components/Register/register";
 import Home from "./Components/Home/home";
 import Cookies from 'js-cookie'
 export default class App extends React.Component {
-  state = {
-    Page: "only on login screen",
-  };
-
-  render() {
-    if (!navigator.onLine && !Cookies.get("cookie-SignIn")) {
+  
+ render() {
+   if (!navigator.onLine) {
+    return <p className="offline-message">You Are Offline</p>
+   }
     return (
       <Router>
-        <NavbarItem signInPage={this.state.Page} />
-        <Container fluid>
-          <Row>
-            <Col xs={12} className="text-center">
-              <Routes>
-                <Route exact path="/Visual/Home" element={<Home />} />
-              </Routes>
-            </Col>
-          </Row>
-        </Container>
-      </Router>
-    );
-    }
-    return (
-      <Router>
-        <NavbarItem signInPage={this.state.Page} />
+        <NavbarItem/>
         <Container fluid>
           <Row>
             <Col xs={12} className="text-center">
@@ -45,4 +29,4 @@ export default class App extends React.Component {
       </Router>
     );
   }
-}
+ }
