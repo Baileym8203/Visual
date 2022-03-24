@@ -1,26 +1,74 @@
 
- [
-   {
+ [{
      "id": 1,
      "text": "Button --HTML-BODY"
    },
    {
-     "id": 3,
+     "id": 2,
      "text": "Link --HTML-BODY"
    },
    {
-     "id": 4,
+     "id": 3,
      "text": "Image --HTML-BODY"
    },
    {
+     "id": 4,
+     "text": "Paragraph --HTML-BODY"
+   },
+   {
      "id": 5,
-     "text": "paragraph --HTML-BODY"
+     "text": "Section --HTML-BODY"
    },
    {
      "id": 6,
-     "text": "section --HTML-BODY"
+     "text": "Div --HTML-BODY"
+   },
+    {
+     "id": 7,
+     "text": "Unordered List --HTML-BODY"
    },
    {
-     "id": 7,
-     "text": "div --HTML-BODY"
+    "id": 8,
+    "text": "Ordered List --HTML-BODY"
+   },
+   {
+    "id": 9,
+    "text": "List Item --HTML-BODY"
+   },
+   {
+   "id": 10,
+   "text": "Navigation --HTML-BODY"
+   },
+   {
+   "id": 11,
+   "text": "Span --HTML-BODY"
+   },
+   {
+    "id": 12,
+    "text": "Audio --HTML-BODY"
+   },
+   {
+   "id": 13,
+   "text": "Video --HTML-BODY"
+   },
+   {
+  "id": 14,
+  "text": "Article --HTML-BODY"
+   },
+   {
+   "id": 15,
+   "text": "Header --HTML-BODY"
+   },
+   {
+    "id": 16,
+    "text": "Footer --HTML-BODY"
+   },
+   {
+  "id": 17,
+  "text": "Canvas --HTML-BODY"
+   }, 
+   {
+ "id": 18,
+ "text": "Aside --HTML-BODY"
    }]
+ 
