@@ -19,7 +19,7 @@ else {
   });
 
   return (
-    <ul style={{display: "block", marginLeft: "-55px"}}>
+    <ul style={{display: "block", marginLeft: "-55px", marginTop: "10px"}}>
       {filteredData.map((item) => (
         <li style={{listStyleType: "none", fontFamily: "M PLUS 1 code"}} key={item.id}>{item.text}</li>
       ))}

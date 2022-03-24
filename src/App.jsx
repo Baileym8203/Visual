@@ -5,13 +5,13 @@ import { Container, Col, Row } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Register from "./Components/Register/register";
 import Home from "./Components/Home/home";
-import Cookies from 'js-cookie'
 export default class App extends React.Component {
   
  render() {
    if (!navigator.onLine) {
     return <p className="offline-message">You Are Offline</p>
    }
+
     return (
       <Router>
         <NavbarItem/>

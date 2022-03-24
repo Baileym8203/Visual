@@ -1,0 +1,15 @@
+.form-container {
+margin-top: 125px;
+background: url('https://wallpapercave.com/wp/wp3980738.jpg');
+padding: 40px;
+}
+
+.text-form {
+color: white
+}
+
+@media all and (min-width: 2260px) {
+.form-container {
+margin-top: 350px;
+}
+}

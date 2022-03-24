@@ -14,6 +14,11 @@ const Register = () => {
 const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
 
+if (Cookies.get("cookie-SignIn")) {
+  // if cookie-SignIn isn't seen the page will redirect to the sign in page
+  return (window.location.href = "/Visual/Home");
+}
+
 const registerUser = () => {
  createUserWithEmailAndPassword(authentication, email, password)
  .then((res) => {
@@ -55,7 +60,7 @@ return (
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
               />
-              <Form.Text className="text-muted">
+              <Form.Text className="text-form">
                 We'll never share your email with anyone EVER.
               </Form.Text>
             </Form.Group>
@@ -68,7 +73,7 @@ return (
                 value={password}
                 onChange={(event) => setPassword(event.target.value)}
               />
-              <Form.Text className="text-muted">
+              <Form.Text className="text-form">
                 We'll never share your password with anyone EVER.
               </Form.Text>
             </Form.Group>
