@@ -5,6 +5,7 @@ import { Container, Col, Row } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Register from "./Components/Register/register";
 import Home from "./Components/Home/home";
+import WhyCode from "./Components/WhyCode/whycode";
 export default class App extends React.Component {
   
  render() {
@@ -22,6 +23,8 @@ export default class App extends React.Component {
                 <Route exact path="/Visual" element={<Register />} />
 
                 <Route exact path="/Visual/Home" element={<Home />} />
+
+                <Route exact path="/Visual/WhyCode" element={<WhyCode />} />
               </Routes>
             </Col>
           </Row>
