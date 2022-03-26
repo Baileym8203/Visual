@@ -11,6 +11,7 @@ import {
   Image,
 } from "react-bootstrap";
 import List from "../List/list";
+import NavbarItem from '../Navbar/navbar'
 const Home = () => {
   const [inputText, setInputText] = useState("");
   const buttonHTML = useState("<button>Click ME</button>");
@@ -57,45 +58,6 @@ const Home = () => {
     // lowercase text return
     let lowerCase = e.target.value.toLowerCase();
     setInputText(lowerCase);
-
-    if (e.target.value === "") {
-      return (
-        document.querySelector(".button-code").classList.add("show"), // adds all classes until user starts typing the search params
-        document.querySelector(".button-code-header").classList.add("show"),
-        document.querySelector(".image-code").classList.add("show"),
-        document.querySelector(".image-code-header").classList.add("show"),
-        document.querySelector(".link-code").classList.add("show"),
-        document.querySelector(".link-code-header").classList.add("show"),
-        document.querySelector(".paragraph-code").classList.add("show"),
-        document.querySelector(".paragraph-code-header").classList.add("show"),
-        document.querySelector(".ul-code").classList.add("show"),
-        document.querySelector(".ul-code-header").classList.add("show"),
-        document.querySelector(".ol-code").classList.add("show"),
-        document.querySelector(".ol-code-header").classList.add("show"),
-        document.querySelector(".li-code").classList.add("show"),
-        document.querySelector(".li-code-header").classList.add("show"),
-        document.querySelector(".nav-code").classList.add("show"),
-        document.querySelector(".nav-code-header").classList.add("show"),
-        document.querySelector(".span-code").classList.add("show"),
-        document.querySelector(".span-code-header").classList.add("show"),
-        document.querySelector(".audio-code").classList.add("show"),
-        document.querySelector(".audio-code-header").classList.add("show"),
-        document.querySelector(".video-code").classList.add("show"),
-        document.querySelector(".video-code-header").classList.add("show"),
-        document.querySelector(".article-code").classList.add("show"),
-        document.querySelector(".article-code-header").classList.add("show"),
-        document.querySelector(".header-code").classList.add("show"),
-        document.querySelector(".header-code-header").classList.add("show"),
-        document.querySelector(".footer-code").classList.add("show"),
-        document.querySelector(".footer-code-header").classList.add("show"),
-        document.querySelector(".canvas-code").classList.add("show"),
-        document.querySelector(".canvas-code-header").classList.add("show"),
-        document.querySelector(".aside-code").classList.add("show"),
-        document.querySelector(".aside-code-header").classList.add("show"),
-        document.querySelector(".section-code").classList.add("show"),
-        document.querySelector(".section-code-header").classList.add("show")
-      );
-    }
 
     if (e.target.value === "button" || e.target.value === "Button") {
       // returns button code on Button/button searches
@@ -316,18 +278,21 @@ const Home = () => {
   }
 
   return (
-    <Container>
-      <h1 className="top-heading">Search a Element</h1>
-      <Form className="d-flex justify-content-center mt-5 search-bar">
-        <FormControl
-          type="Search"
-          placeholder="Search"
-          className="me-2"
-          aria-label="Search"
-          onChange={inputHandler}
-        />
-      </Form>
-      <List input={inputText} />
+    <Container fluid style={{ padding: "0px" }}>
+      <NavbarItem />
+      <Row className="row --search-bar">
+        <h1 className="top-heading">CodeEasy</h1>
+        <Form className="d-flex justify-content-center mt-5 search-bar">
+          <FormControl
+            type="Search"
+            placeholder="Search"
+            className="text-center"
+            aria-label="Search"
+            onChange={inputHandler}
+          />
+        </Form>
+        <List input={inputText} />
+      </Row>
       <Col className="col-return-box">
         <h1 className="button-code-header">HTML Button Tag</h1>
         <h3 className="button-code">{buttonHTML}</h3>
@@ -395,6 +360,35 @@ const Home = () => {
       <Col className="col-return-box">
         <h1 className="aside-code-header">HTML Aside Tag</h1>
         <h3 className="aside-code">{asideHTML}</h3>
+      </Col>
+      <Col className="col --end-column">
+        <h1 className="h1 --why-code">Why Code?</h1>
+        <h3 className="h3 --and-easy">And Easy?</h3>
+        <p className="p --end-paragraph">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi
+          tristique senectus et netus et. Mi tempus imperdiet nulla malesuada
+          pellentesque elit eget gravida. Sit amet luctus venenatis lectus
+          magna. Urna cursus eget nunc scelerisque viverra. Molestie ac feugiat
+          sed lectus vestibulum. Urna et pharetra pharetra massa massa
+          ultricies. Vel eros donec ac odio tempor orci dapibus. Rhoncus mattis
+          rhoncus urna neque viverra justo nec ultrices. Risus at ultrices mi
+          tempus imperdiet nulla malesuada. Lectus mauris ultrices eros in.
+          Ultricies mi quis hendrerit dolor magna eget est lorem ipsum. Maecenas
+          ultricies mi eget mauris pharetra et ultrices neque. Pharetra vel
+          turpis nunc eget lorem. Gravida rutrum quisque non tellus orci ac
+          auctor augue. Lacus viverra vitae congue eu. Sit amet nulla facilisi
+          morbi tempus iaculis urna id. Pharetra massa massa ultricies mi. Magna
+          eget est lorem ipsum dolor. Sed vulputate mi sit amet mauris commodo
+          quis imperdiet. Donec enim diam vulputate ut pharetra. Ac tortor
+          dignissim convallis aenean. Eu scelerisque felis imperdiet proin
+          fermentum leo. Arcu felis bibendum ut tristique et egestas. Mauris
+          ultrices eros in cursus turpis massa tincidunt. Varius vel pharetra
+          vel turpis. Praesent elementum facilisis leo vel fringilla est
+          ullamcorper. Felis imperdiet proin fermentum leo vel orci porta non.
+          Sagittis purus sit amet volutpat consequat mauris nunc. Risus viverra
+          adipiscing at in tellus integer feugiat.
+        </p>
       </Col>
     </Container>
   );

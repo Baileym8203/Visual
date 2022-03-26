@@ -5,7 +5,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'fire
 import {Container, Row, Col, Form, Button} from 'react-bootstrap'
 import Cookies from 'js-cookie'
 import './register.css'
-
+import NavbarItem from '../Navbar/navbar';
 
 const Register = () => {
 
@@ -48,45 +48,48 @@ alert('Failed to Sign In')
 }
 
 return (
-    <Container className="form-container">
-      <Row>
-        <Col xs={12}>
-          <Form>
-            <Form.Group className="mb-4 mt-5" controlId="formBasicEmail">
-              <Form.Label>Email</Form.Label>
-              <Form.Control
-                type="email"
-                placeholder="Enter email"
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
-              />
-              <Form.Text className="text-form">
-                We'll never share your email with anyone EVER.
-              </Form.Text>
-            </Form.Group>
+  <Container className="form-container">
+    <NavbarItem />
+    <Row>
+      <Col xs={12}>
+        <Form>
+          <Form.Group className="mb-4 mt-5" controlId="formBasicEmail">
+            <Form.Label className='label --email'>Email</Form.Label>
+            <Form.Control
+              type="email"
+              placeholder="Enter email"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+              className="control --enter-email"
+            />
+            <Form.Text className="text-form">
+              We'll never share your email with anyone EVER.
+            </Form.Text>
+          </Form.Group>
 
-            <Form.Group className="mb-4" controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                type="password"
-                placeholder="Password"
-                value={password}
-                onChange={(event) => setPassword(event.target.value)}
-              />
-              <Form.Text className="text-form">
-                We'll never share your password with anyone EVER.
-              </Form.Text>
-            </Form.Group>
-            <Button variant="secondary" type="button" onClick={registerUser}>
-              Register
-            </Button>
-            <Button variant="dark" type="button" onClick={signInUser}>
-              Sign In
-            </Button>
-          </Form>
-        </Col>
-      </Row>
-    </Container>
+          <Form.Group className="mb-4" controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
+              className="control --enter-password"
+            />
+            <Form.Text className="text-form">
+              We'll never share your password with anyone EVER.
+            </Form.Text>
+          </Form.Group>
+          <Button variant="dark" className='me-2' type="button" onClick={registerUser}>
+            Register
+          </Button>
+          <Button variant="dark" type="button" onClick={signInUser}>
+            Sign In
+          </Button>
+        </Form>
+      </Col>
+    </Row>
+  </Container>
 );
 }
 

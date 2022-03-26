@@ -15,10 +15,9 @@ export default class App extends React.Component {
 
     return (
       <Router>
-        <NavbarItem/>
+  
         <Container fluid>
-          <Row>
-            <Col xs={12} className="text-center">
+          <Row className="text-center">
               <Routes>
                 <Route exact path="/Visual" element={<Register />} />
 
@@ -26,7 +25,6 @@ export default class App extends React.Component {
 
                 <Route exact path="/Visual/WhyCode" element={<WhyCode />} />
               </Routes>
-            </Col>
           </Row>
         </Container>
       </Router>

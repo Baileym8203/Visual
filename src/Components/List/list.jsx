@@ -7,7 +7,7 @@ const List = (props) => {
 
   const filteredData = data.filter((el) => {
     //if no input the return the original
-    if (props.input === '') {
+    if (props.input === 'all') {
         return el
     }
 
@@ -19,7 +19,7 @@ else {
   });
 
   return (
-    <ul style={{display: "block", marginLeft: "-55px", marginTop: "10px"}}>
+    <ul>
       {filteredData.map((item) => (
         <li style={{listStyleType: "none", fontFamily: "M PLUS 1 code"}} key={item.id}>{item.text}</li>
       ))}
