@@ -9,10 +9,17 @@ padding-right: 0px;
 color: white;
 }
 
+.--form {
+display: flex;
+justify-content: center;
+}
 
 .--email{
 margin-top: 175px;
 }
 
-.--enter-email{
+@media all and (min-width: 768px ) {
+.--enter-email {
+width: 625px
+}
 }

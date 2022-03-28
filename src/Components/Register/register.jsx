@@ -1,7 +1,11 @@
 import react from 'react';
 import {useState} from 'react';
 import { authentication } from '../Firebase/firebase';
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  sendPasswordResetEmail,
+} from "firebase/auth";
 import {Container, Row, Col, Form, Button} from 'react-bootstrap'
 import Cookies from 'js-cookie'
 import './register.css'
@@ -47,14 +51,25 @@ alert('Failed to Sign In')
 })
 }
 
+const forgotPassword = () => {
+sendPasswordResetEmail(authentication, email)
+  .then((res) => {
+  setIsSignedIn(false)
+  console.log(res)
+  })
+  .catch((err) => {
+    console.log(err)
+    alert("type in email Before hitting forgot!")
+  });
+}
 return (
   <Container className="form-container">
     <NavbarItem />
     <Row>
-      <Col xs={12}>
+      <Col className='col --form' xxl={12}>
         <Form>
           <Form.Group className="mb-4 mt-5" controlId="formBasicEmail">
-            <Form.Label className='label --email'>Email</Form.Label>
+            <Form.Label className="label --email">Email</Form.Label>
             <Form.Control
               type="email"
               placeholder="Enter email"
@@ -80,8 +95,21 @@ return (
               We'll never share your password with anyone EVER.
             </Form.Text>
           </Form.Group>
-          <Button variant="dark" className='me-2' type="button" onClick={registerUser}>
+          <Button
+            variant="dark"
+            className="me-2"
+            type="button"
+            onClick={registerUser}
+          >
             Register
+          </Button>
+          <Button
+            className="me-2"
+            variant="dark"
+            type="button"
+            onClick={forgotPassword}
+          >
+            Forgot
           </Button>
           <Button variant="dark" type="button" onClick={signInUser}>
             Sign In

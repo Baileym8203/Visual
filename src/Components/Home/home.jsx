@@ -12,8 +12,12 @@ import {
 } from "react-bootstrap";
 import List from "../List/list";
 import NavbarItem from '../Navbar/navbar'
+import BarChartItem from "../Bar Chart/barchart";
 const Home = () => {
   const [inputText, setInputText] = useState("");
+  let [bodyUV] = useState(0);
+  let [headUV] = useState(0);
+  let [styleUV] = useState(0);
   const buttonHTML = useState("<button>Click ME</button>");
   const imgHTML = useState("<img src='code.png' alt='code image'>");
   const linkHTML = useState("<a href='https://c.com'> Navigate Here! </a>");
@@ -58,14 +62,15 @@ const Home = () => {
     // lowercase text return
     let lowerCase = e.target.value.toLowerCase();
     setInputText(lowerCase);
-
+    
     if (e.target.value === "button" || e.target.value === "Button") {
       // returns button code on Button/button searches
+      
       return (
         document.querySelector(".button-code").classList.add("show"),
         document.querySelector(".button-code-header").classList.add("show")
-      );
-    }
+      )
+      }
     if (e.target.value === "image" || e.target.value === "Image") {
       // returns image code on image/Image searches
       return (
@@ -241,7 +246,9 @@ const Home = () => {
         document.querySelector(".link-code").classList.remove("show"),
         document.querySelector(".link-code-header").classList.remove("show"),
         document.querySelector(".paragraph-code").classList.remove("show"),
-        document.querySelector(".paragraph-code-header").classList.remove("show"),
+        document
+          .querySelector(".paragraph-code-header")
+          .classList.remove("show"),
         document.querySelector(".section-code").classList.remove("show"),
         document.querySelector(".section-code-header").classList.remove("show"),
         document.querySelector(".ul-code").classList.remove("show"),
@@ -270,7 +277,7 @@ const Home = () => {
         document.querySelector(".aside-code-header").classList.remove("show")
       );
     }
-  };
+  };  
 
   if (!Cookies.get("cookie-SignIn")) {
     // if cookie-SignIn isn't seen the page will redirect to the sign in page
@@ -362,32 +369,40 @@ const Home = () => {
         <h3 className="aside-code">{asideHTML}</h3>
       </Col>
       <Col className="col --end-column">
+        <BarChartItem />
         <h1 className="h1 --why-code">Why Code?</h1>
-        <h3 className="h3 --and-easy">And Easy?</h3>
+        <h3 className="h3 --and-easy">Why Use Easy?</h3>
         <p className="p --end-paragraph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi
-          tristique senectus et netus et. Mi tempus imperdiet nulla malesuada
-          pellentesque elit eget gravida. Sit amet luctus venenatis lectus
-          magna. Urna cursus eget nunc scelerisque viverra. Molestie ac feugiat
-          sed lectus vestibulum. Urna et pharetra pharetra massa massa
-          ultricies. Vel eros donec ac odio tempor orci dapibus. Rhoncus mattis
-          rhoncus urna neque viverra justo nec ultrices. Risus at ultrices mi
-          tempus imperdiet nulla malesuada. Lectus mauris ultrices eros in.
-          Ultricies mi quis hendrerit dolor magna eget est lorem ipsum. Maecenas
-          ultricies mi eget mauris pharetra et ultrices neque. Pharetra vel
-          turpis nunc eget lorem. Gravida rutrum quisque non tellus orci ac
-          auctor augue. Lacus viverra vitae congue eu. Sit amet nulla facilisi
-          morbi tempus iaculis urna id. Pharetra massa massa ultricies mi. Magna
-          eget est lorem ipsum dolor. Sed vulputate mi sit amet mauris commodo
-          quis imperdiet. Donec enim diam vulputate ut pharetra. Ac tortor
-          dignissim convallis aenean. Eu scelerisque felis imperdiet proin
-          fermentum leo. Arcu felis bibendum ut tristique et egestas. Mauris
-          ultrices eros in cursus turpis massa tincidunt. Varius vel pharetra
-          vel turpis. Praesent elementum facilisis leo vel fringilla est
-          ullamcorper. Felis imperdiet proin fermentum leo vel orci porta non.
-          Sagittis purus sit amet volutpat consequat mauris nunc. Risus viverra
-          adipiscing at in tellus integer feugiat.
+          Coding is something that can make you the best you! What do I mean by
+          that? Well being a coder requires brute force through the brick walls
+          of problem solving. This is why only a measly 5% of people that start
+          the coding journey end up successful. So I couldn't say this enough,
+          not everyone is a coder or made to be a coder. One of the main tasks
+          of a coder is problem solving. If you can push through code syntax
+          issues, and never give up to a issue no matter how menacing it may
+          look code is for you! Not only this, but when you code you will always
+          be learning new things. Whether it be as big as a new framework or as
+          little as a new tag. Being able to adapt yourself to anything at any
+          point is a skill you'll need as a coder.
+        </p>
+        <p className="p --end-paragraph">
+          Ok? but why does this relate to the question. Well when you decide to
+          embark on your coding journey all of these skills will be learned, and
+          or increased exponentially. Which means they can be used in your daily
+          lives. Say you used to get moderately stressed out on somewhat easy to
+          fix situations. Once you start to push through syntax issues your
+          brain will be used to dealing with high stress issues over, and over
+          again. Which in turn will make you better at handling those stressful
+          situations we all find ourselves in when it comes to day to day life.
+          Coding also gives you a brand new perspective on the world of
+          technology whether it's that brand new video game that just came out,
+          or a website like youtube.
+        </p>
+        <p className="p --end-paragraph">
+         That makes sense! But why would I use CodeEasy? Code Easy is designed to make finding the day to day tags of HTML, CSS, and JS a breeze.
+         When using it you can search what you are trying to make or the exact name of the tags if you ever forget those small tags at times! Like for instance a button easy enough,
+         would be button in the search. When searched it will automatically bring back the tags used to create the object in this case it would bring back a button! CodeEasy makes
+         learning code as well as remembering code Easy for all devs big and small!
         </p>
       </Col>
     </Container>

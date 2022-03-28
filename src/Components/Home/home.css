@@ -27,7 +27,6 @@ height: 55px;
 .col-return-box {
 background-color: white;
 width: 100%;
-border: 1px solid rgba(0, 0, 0, 0.74);
 display: flex;
 justify-content: space-around;
 align-items: center;
@@ -443,15 +442,25 @@ padding-bottom: 20px;
 
 .--end-column {
 background-color: rgba(0, 0, 0, 0.74);
-padding-top: 150px;
-padding-bottom: 150px;
+padding-top: 100px;
+padding-bottom: 100px;
 font-family: 'M PLUS 1 code';
 }
 
 .--why-code{
-    font-size: 45px;
+font-size: 50px;
+margin-top: 50px;
 }
 
 .--and-easy{
 font-size: 25px;
+margin-top: 5px;
+margin-bottom: 25px;
+}
+
+@media all and (min-width: 768px) {
+.--end-paragraph {
+padding-left: 150px;
+padding-right: 150px;
+}
 }
